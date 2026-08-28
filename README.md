@@ -1,167 +1,123 @@
-**Job Tracker Dashboard**
+# 💼 Job Tracker Dashboard
 
-A modern job application tracking system built with React + Vite that helps users organize applications, monitor progress, and analyze job search performance using interactive data visualizations.
+> A modern and responsive job application tracking dashboard built with **React and Vite** to help users organize applications, track progress, monitor deadlines, and analyze their job search performance through interactive visualizations.
 
-This project demonstrates practical frontend engineering skills including CRUD operations, filtering, search, sorting, pagination, state management, data persistence, and dashboard analytics.
+<p align="center">
+  <strong>Track applications • Monitor progress • Analyze your job search</strong>
+</p>
 
-**Project Overview**
+---
 
-The Job Tracker Dashboard is a single-page application that allows users to:
+## 🌐 Live Demo
 
-Track job applications in one place
+🚀 **Coming soon — deployment in progress**
 
-Monitor deadlines and progress stages
+---
 
-Visualize application trends
+## 📌 Overview
 
-Improve job search efficiency
+Managing multiple job applications across different companies can quickly become difficult.
 
-All data is stored in browser local storage, so the application works without a backend.
+**Job Tracker Dashboard** provides a centralized workspace where users can record job applications, update their application status, search and filter opportunities, monitor deadlines, and analyze their overall job-search activity.
 
-**Key Features**
-Application Management
+The application is built as a **client-side Single Page Application (SPA)** using React and Vite. Application data is persisted using the browser's **Local Storage**, allowing the application to work without a backend or database.
 
-Add new job applications
+---
 
-Edit job details
+## ✨ Features
 
-Delete applications
+### 📋 Application Management
 
-**Track:**
+Create and manage job applications from a centralized dashboard.
 
-Company name
+- Add new job applications
+- Edit existing applications
+- Delete applications
+- Track company and role
+- Record application date
+- Set application deadlines
+- Store job links
+- Add notes
+- Update application status
 
-Role
+### 🔄 Application Status Tracking
 
-Application status (Applied / Interview / Offer / Rejected)
+Track applications through different stages of the hiring process:
 
-Application deadline
+| Status | Description |
+|--------|-------------|
+| 🟡 **Applied** | Application has been submitted |
+| 🔵 **Interview** | Candidate has progressed to an interview |
+| 🟢 **Offer** | Company has extended an offer |
+| 🔴 **Rejected** | Application was unsuccessful |
 
-Date applied
+---
 
-Smart Controls
+### 🔎 Search, Filter & Sort
 
-Search by company or role
+Quickly find and organize applications using:
 
-Filter by status
+- 🔍 Search by company or role
+- 🎯 Filter applications by status
+- 🆕 Sort by newest applications
+- 📅 Sort by oldest applications
+- 🔤 Sort companies alphabetically
+- 📄 Pagination with 10 applications per page
 
-**Sort by:**
+---
 
-Newest first
+### 📊 Analytics Dashboard
 
-Oldest first
+The dedicated analytics dashboard transforms application data into meaningful insights.
 
-Company (A–Z)
+Interactive visualizations are built using **Recharts** and include:
 
-Pagination (10 jobs per page)
+- 🥧 Application status distribution
+- 📊 Status comparison
+- 📈 Monthly application trends
+- 🏢 Top companies applied to
+- 🎯 Offer success rate
+- 📋 Overall application statistics
 
-Analytics Dashboard
+---
 
-**Interactive visualizations powered by Recharts:**
+### 💾 Local Data Persistence
 
-Status distribution (Pie chart)
+The application uses the browser's **Local Storage API** for persistence.
 
-Status comparison (Bar chart)
+This means:
 
-Monthly application trend (Line chart)
+- Data survives browser refreshes
+- No backend server is required
+- No database configuration is required
+- Data is available across browser sessions
+- The application can be deployed as a static web application
 
-Top companies applied to
+> **Note:** Since data is stored locally in the browser, it is not synchronized across devices or browsers.
 
-Offer success rate
+---
 
-**Data Persistence**
+## 🖥️ Application Workflow
 
-Uses browser local storage
-
-Data remains after refresh
-
-Fully client-side (no backend required)
-
-**Tech Stack**
-Technology	Purpose
-React	UI development
-Vite	Fast build & dev server
-React Router	Page navigation
-Recharts	Data visualization
-CSS	Responsive UI styling
-Local Storage	Client-side data persistence
-
-**Project Structure**
-src/
-│
-├── components/
-│   ├── JobForm.jsx       # Add new job entries
-│   ├── JobItem.jsx       # Individual job row
-│   ├── JobList.jsx       # Job table view
-│   ├── Navbar.jsx        # Top navigation
-│   └── Stats.jsx         # Charts & analytics logic
-│
-├── pages/
-│   └── Analytics.jsx     # Analytics dashboard page
-│
-├── styles/
-│   └── app.css           # Application styles
-│
-├── App.jsx               # Main app logic
-└── main.jsx              # App entry point
-
-**Installation & Setup**
-1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/job-tracker.git
-cd job-tracker
-
-2. Install dependencies
-npm install
-
-3. Start development server
-npm run dev
-
-
-**The app will run at:**
-
-http://localhost:5173
-
-**Build for Production**
-npm run build
-
-**Core Concepts Demonstrated**
-
-React Hooks (useState, useEffect)
-
-Component-based architecture
-
-Controlled forms
-
-Conditional rendering
-
-Data filtering and sorting
-
-Pagination logic
-
-Chart data transformation
-
-Local storage integration
-
-Responsive UI design
-
-SPA routing with React Router
-
-**Use Cases**
-
-This project is suitable for:
-
-Portfolio demonstration
-
-Frontend interview projects
-
-React learning reference
-
-Job search tracking tool
-
-**Author**
-
-Thejasiva
-
-License
-
-This project is open-source and free to use.
+```text
+             ┌─────────────────────┐
+             │    Job Dashboard    │
+             └──────────┬──────────┘
+                        │
+          ┌─────────────┼─────────────┐
+          ▼             ▼             ▼
+     Add / Edit      Search &      Filter &
+     Applications     Sort          Organize
+          │             │             │
+          └─────────────┼─────────────┘
+                        ▼
+                ┌───────────────┐
+                │ Application   │
+                │   Tracking    │
+                └───────┬───────┘
+                        │
+                        ▼
+                ┌───────────────┐
+                │   Analytics   │
+                │   Dashboard   │
+                └───────────────┘
